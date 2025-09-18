@@ -65,22 +65,21 @@ export default function LONDOTHome() {
 
 
       {/* Hero */}
-    <div id="top" className="relative">
-      <div className="absolute inset-0 -z-10">
-        <video
-          className="w-full h-[68vh] md:h-[78vh] object-cover"
-          src={`${heroVideo}?v=1`}
-          muted
-          playsInline
-          autoPlay
-          loop
-          preload="metadata"
-          poster={`${import.meta.env.BASE_URL}poster.jpg`} // 없으면 이 속성 제거
-        >
-          <source src={`${heroVideo}?v=1`} type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-white"/>
-      </div>
+      <div id="top" className="relative">
+        <div className="absolute inset-0 -z-10">
+          <video
+            className="w-full h-[68vh] md:h-[78vh] object-cover"
+            src={heroVideo}
+            muted
+            playsInline
+            autoPlay
+            loop
+            preload="metadata"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-white"/>
+        </div>
       <Section className="h-[68vh] md:h-[78vh] grid place-items-center">
         <motion.div variants={fade} initial="hidden" animate="show" className="text-center text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
           <Tag>THE BRIGHTEST MOMENT OF YOU</Tag>
