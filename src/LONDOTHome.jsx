@@ -19,7 +19,7 @@ const Tag = ({ children }) => (
 );
 
 // --- Mock assets (replace with real) ---
-const heroVideo = "https://raw.githubusercontent.com/LONDOT/LON/main/copy_2D246FDA-1279-4A40-8826-6AB03DFE62D3.mp4";
+const heroVideo = `${import.meta.env.BASE_URL}hero.mp4`; // GitHub Pages base에 자동 대응
 const productImages = {
   shampoo: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?q=80&w=1400&auto=format&fit=crop",
   tonic: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1400&auto=format&fit=crop",
@@ -43,7 +43,7 @@ export default function LONDOTHome() {
           <nav className="hidden md:flex gap-8 text-sm">
             <a href="#story" className="hover:opacity-70">스토리</a>
             <a href="#products" className="hover:opacity-70">제품</a>
-            <a href="#science" className="hover:opacity-70">과학</a>
+            <a href="#science" className="hover:opacity-70">테크놀로지</a>
             <a href="#gallery" className="hover:opacity-70">비주얼</a>
             <a href="#contact" className="hover:opacity-70">문의</a>
           </nav>
