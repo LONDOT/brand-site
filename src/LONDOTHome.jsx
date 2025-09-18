@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Sparkles, Leaf, Droplets, TestTube2, Instagram, ShoppingBag, Youtube, Mail, MapPin } from "lucide-react";
-import heroVideo from "./assets/hero.mp4";
+
 // --- Utility ---
 const fade = {
   hidden: { opacity: 0, y: 24 },
@@ -65,33 +65,41 @@ export default function LONDOTHome() {
 
 
       {/* Hero */}
+
       <div id="top" className="relative">
         <div className="absolute inset-0 -z-10">
           <video
             className="w-full h-[68vh] md:h-[78vh] object-cover"
-            src={heroVideo}
+            src={`${import.meta.env.BASE_URL}hero.mp4`}
             muted
             playsInline
             autoPlay
             loop
             preload="metadata"
           >
-            <source src={heroVideo} type="video/mp4" />
+            <source src={`${import.meta.env.BASE_URL}hero.mp4`} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-white"/>
         </div>
-      <Section className="h-[68vh] md:h-[78vh] grid place-items-center">
-        <motion.div variants={fade} initial="hidden" animate="show" className="text-center text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
-          <Tag>THE BRIGHTEST MOMENT OF YOU</Tag>
-          <h1 className="mt-5 text-4xl md:text-6xl font-medium tracking-[-0.02em]">고품격 헤어 & 스칼프 케어</h1>
-          <p className="mt-4 text-sm md:text-base text-white/90 leading-relaxed">깨끗한 두피. 윤기 있는 모발. 불필요한 과장은 배제하고 성분과 공정으로 증명합니다.</p>
-          <div className="mt-8 flex justify-center gap-3">
-            <a href="#products" className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white text-neutral-900"><ChevronRight size={16}/>제품 보기</a>
-            <a href="#science" className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white/10 ring-1 ring-white/40">작동 원리</a>
-          </div>
-        </motion.div>
-      </Section>
-    </div>
+        <Section className="h-[68vh] md:h-[78vh] grid place-items-center">
+          <motion.div variants={fade} initial="hidden" animate="show" className="text-center text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
+            <Tag>THE BRIGHTEST MOMENT OF YOU</Tag>
+            <h1 className="mt-5 text-4xl md:text-6xl font-medium tracking-[-0.02em]">고품격 헤어 & 스칼프 케어</h1>
+            <p className="mt-4 text-sm md:text-base text-white/90 leading-relaxed">
+              깨끗한 두피. 윤기 있는 모발. 불필요한 과장은 배제하고 성분과 공정으로 증명합니다.
+            </p>
+            <div className="mt-8 flex justify-center gap-3">
+              <a href="#products" className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white text-neutral-900">
+                <ChevronRight size={16}/>제품 보기
+              </a>
+              <a href="#science" className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white/10 ring-1 ring-white/40">
+                작동 원리
+              </a>
+            </div>
+          </motion.div>
+        </Section>
+      </div>
+
 
 
       {/* Story */}
